@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<!--
+CREATED BY Jequan Green
+10Jan2022
+for CSC102 class
+jeqgreen@uat.edu
+-->
+
+<head>
+    <script src="code.js"></script>
+    <script src=classCode.js></script>
+    <link href="loginStyle.css" rel="stylesheet">
+    <!--This is the had portion, it is behind the scenes...-->
+    <title>
+        Jequan Green UAT Space Page
+    </title>
+    <style>
+        body {
+            background-color: purple;
+        }
+         </style>
+</head>
+
+<body>
+    <table>
+        <td><img src="UATspaceLogo-1.jpg"></td>
+        <td> <h1>
+            UAT Space program
+        </h1>
+    </td>
+    </table>
+    <table id="data" border="2" width="70%">
+        <col style="width: 35%">
+        <col style="width: 35%">
+        <thead>
+            <tr id="tableHdr">
+                <th>Data type</th>
+                <th>Reading</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="seconds"></tr>
+            <tr id="latitude"></tr>
+            <tr id="longitude"></tr>
+            <tr id="gpsSensor_alt"></tr>
+            <tr id="bmpSensor_alt"></tr>
+            <tr id="bmpSensor_pres"></tr>
+            <tr id="bmpSensor_temp"></tr>
+            <tr id="digSensor_temp"></tr>
+            <tr id="cssSensor_temp"></tr>
+            <tr id="cssSensor_eCO2"></tr>
+            <tr id="cssSensor_TVOC"></tr>
+            <tr id="UV"></tr>
+            <tr id="accelX"></tr>
+            <tr id="accelY"></tr>
+            <tr id="accelZ"></tr>
+            <tr id="magneticX"></tr>
+            <tr id="magneticY"></tr>
+            <tr id="magneticZ"></tr>
+            <tr id="gyroX"></tr>
+            <tr id="gyroY"></tr>
+            <tr id="gyroZ"></tr>
+        </tbody>
+    </table>
+
+    <buttom class="SSButtons" id="startButton" onclick="start();">
+        Start
+    </buttom> 
+    
+    <buttom class="SSButtons" id="stopButton" onclick="stop();">
+        Stop
+    </buttom>
+    <br>
+    <br>
+    <h2>Let's play Craps!!!</h2>
+    <div id="CrapsRes">Craps Result</div>
+    <div id="die1Res">die1 Result</div>
+    <div id="die2Res">die2 Result</div>
+    <div id="sumRes">sum Result</div>
+    <button onclick="platCraps();">Play Craps</button>
+    <br>
+    Number of wins: <div id="wins">0</div>
+    Number of losses: <div id="losses">0</div>
+    Number of ties: <div id="ties">0</div>
+
+    <script>
+        // var docText = "This is the contents of my docText variable";
+        // var addText = "and i like it!";
+        document.write(docText + " " + addText);
+    </script>
+    <br>
+    <br>
+    <button class="lgButton" onclick="playStation();">Play space Station sounds</button>
+    <br>
+    <button class="lgButton" onclick="playOddity();">Play a space oddity</button>
+    <br>
+    <br>
+    <script>
+        var springLaunch = new Mission(" To boldy go...", 19, 25, "May", 2023, "Fiona", 3);
+        var fallLaunch = new Mission("To go again", 25, 13, "November", 2022, "Polaris", 2);
+    </script>
+    <button onclick="runSpDisplay()" class="button">Spring mission parameters</button>
+    <button onclick="spLaunch()" class="button">Start Spring Launch</button>
+    <br>
+    <button onclick="runFallDisplay()" class="button">Fall mission parameters</button>
+    <button onclick="fallLaunch()" class="button">Start Fall Launch</button>
+</body>
+</html>
